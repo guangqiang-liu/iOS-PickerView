@@ -13,9 +13,19 @@
 		9CA4034220AE9F7F00E4AA51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4034120AE9F7F00E4AA51 /* Assets.xcassets */; };
 		9CA4034520AE9F7F00E4AA51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4034320AE9F7F00E4AA51 /* LaunchScreen.storyboard */; };
 		9CA4034820AE9F7F00E4AA51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4034720AE9F7F00E4AA51 /* main.m */; };
+		9CA4035520AEA05E00E4AA51 /* WLAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4035420AEA05E00E4AA51 /* WLAddressModel.m */; };
+		9CA4035820AEA0FC00E4AA51 /* WLAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4035720AEA0FC00E4AA51 /* WLAddressPickerView.m */; };
+		9CA4035B20AEA2EC00E4AA51 /* WLTooBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4035A20AEA2EC00E4AA51 /* WLTooBarView.m */; };
+		9CA4036120AEA40300E4AA51 /* WLDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4036020AEA40300E4AA51 /* WLDatePickerView.m */; };
+		9CA4036320AEA47A00E4AA51 /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4036220AEA47A00E4AA51 /* province_data.xml */; };
+		9CA4036620AEA48B00E4AA51 /* WLPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4036520AEA48B00E4AA51 /* WLPickerView.m */; };
+		9CA4036920AEA51000E4AA51 /* WLPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4036820AEA51000E4AA51 /* WLPickerViewManager.m */; };
+		D74F7C6CBBAB6D2C28445E2B /* libPods-WLPickerView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89850BFA22BC525357E26115 /* libPods-WLPickerView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		164A5667E54188809A661A1F /* Pods-WLPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView.release.xcconfig"; sourceTree = "<group>"; };
+		89850BFA22BC525357E26115 /* libPods-WLPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WLPickerView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA4033520AE9F7F00E4AA51 /* WLPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA4033820AE9F7F00E4AA51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CA4033920AE9F7F00E4AA51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +36,20 @@
 		9CA4034420AE9F7F00E4AA51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CA4034620AE9F7F00E4AA51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CA4034720AE9F7F00E4AA51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CA4035320AEA05E00E4AA51 /* WLAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLAddressModel.h; sourceTree = "<group>"; };
+		9CA4035420AEA05E00E4AA51 /* WLAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLAddressModel.m; sourceTree = "<group>"; };
+		9CA4035620AEA0FC00E4AA51 /* WLAddressPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLAddressPickerView.h; sourceTree = "<group>"; };
+		9CA4035720AEA0FC00E4AA51 /* WLAddressPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLAddressPickerView.m; sourceTree = "<group>"; };
+		9CA4035920AEA2EC00E4AA51 /* WLTooBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLTooBarView.h; sourceTree = "<group>"; };
+		9CA4035A20AEA2EC00E4AA51 /* WLTooBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLTooBarView.m; sourceTree = "<group>"; };
+		9CA4035F20AEA40300E4AA51 /* WLDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLDatePickerView.h; sourceTree = "<group>"; };
+		9CA4036020AEA40300E4AA51 /* WLDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLDatePickerView.m; sourceTree = "<group>"; };
+		9CA4036220AEA47A00E4AA51 /* province_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = province_data.xml; sourceTree = "<group>"; };
+		9CA4036420AEA48B00E4AA51 /* WLPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPickerView.h; sourceTree = "<group>"; };
+		9CA4036520AEA48B00E4AA51 /* WLPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPickerView.m; sourceTree = "<group>"; };
+		9CA4036720AEA51000E4AA51 /* WLPickerViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPickerViewManager.h; sourceTree = "<group>"; };
+		9CA4036820AEA51000E4AA51 /* WLPickerViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPickerViewManager.m; sourceTree = "<group>"; };
+		BEEA218DC9D1155D82B6AD17 /* Pods-WLPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +57,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74F7C6CBBAB6D2C28445E2B /* libPods-WLPickerView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EA10E57B84D93AC28017508 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEEA218DC9D1155D82B6AD17 /* Pods-WLPickerView.debug.xcconfig */,
+				164A5667E54188809A661A1F /* Pods-WLPickerView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9CA4032C20AE9F7F00E4AA51 = {
 			isa = PBXGroup;
 			children = (
 				9CA4033720AE9F7F00E4AA51 /* WLPickerView */,
 				9CA4033620AE9F7F00E4AA51 /* Products */,
+				0EA10E57B84D93AC28017508 /* Pods */,
+				CF2F3291A2837249FF12EF85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +94,11 @@
 		9CA4033720AE9F7F00E4AA51 /* WLPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				9CA4035220AE9FF900E4AA51 /* Model */,
+				9CA4034F20AE9FE600E4AA51 /* Category */,
+				9CA4035020AE9FE600E4AA51 /* Resource */,
+				9CA4034E20AE9FE600E4AA51 /* Tool */,
+				9CA4035120AE9FE600E4AA51 /* View */,
 				9CA4033820AE9F7F00E4AA51 /* AppDelegate.h */,
 				9CA4033920AE9F7F00E4AA51 /* AppDelegate.m */,
 				9CA4033B20AE9F7F00E4AA51 /* ViewController.h */,
@@ -71,6 +112,62 @@
 			path = WLPickerView;
 			sourceTree = "<group>";
 		};
+		9CA4034E20AE9FE600E4AA51 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		9CA4034F20AE9FE600E4AA51 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9CA4035020AE9FE600E4AA51 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9CA4036220AEA47A00E4AA51 /* province_data.xml */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9CA4035120AE9FE600E4AA51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CA4035620AEA0FC00E4AA51 /* WLAddressPickerView.h */,
+				9CA4035720AEA0FC00E4AA51 /* WLAddressPickerView.m */,
+				9CA4035F20AEA40300E4AA51 /* WLDatePickerView.h */,
+				9CA4036020AEA40300E4AA51 /* WLDatePickerView.m */,
+				9CA4036420AEA48B00E4AA51 /* WLPickerView.h */,
+				9CA4036520AEA48B00E4AA51 /* WLPickerView.m */,
+				9CA4035920AEA2EC00E4AA51 /* WLTooBarView.h */,
+				9CA4035A20AEA2EC00E4AA51 /* WLTooBarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CA4035220AE9FF900E4AA51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CA4035320AEA05E00E4AA51 /* WLAddressModel.h */,
+				9CA4035420AEA05E00E4AA51 /* WLAddressModel.m */,
+				9CA4036720AEA51000E4AA51 /* WLPickerViewManager.h */,
+				9CA4036820AEA51000E4AA51 /* WLPickerViewManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF2F3291A2837249FF12EF85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89850BFA22BC525357E26115 /* libPods-WLPickerView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CA4034B20AE9F7F00E4AA51 /* Build configuration list for PBXNativeTarget "WLPickerView" */;
 			buildPhases = (
+				34D132B4F6046C3A1E0C5BE8 /* [CP] Check Pods Manifest.lock */,
 				9CA4033120AE9F7F00E4AA51 /* Sources */,
 				9CA4033220AE9F7F00E4AA51 /* Frameworks */,
 				9CA4033320AE9F7F00E4AA51 /* Resources */,
+				33613CC9920D45939A4717A9 /* [CP] Embed Pods Frameworks */,
+				8333428EC30CCA99F3ACE97E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,18 +232,76 @@
 				9CA4034520AE9F7F00E4AA51 /* LaunchScreen.storyboard in Resources */,
 				9CA4034220AE9F7F00E4AA51 /* Assets.xcassets in Resources */,
 				9CA4034020AE9F7F00E4AA51 /* Main.storyboard in Resources */,
+				9CA4036320AEA47A00E4AA51 /* province_data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33613CC9920D45939A4717A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34D132B4F6046C3A1E0C5BE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WLPickerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8333428EC30CCA99F3ACE97E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9CA4033120AE9F7F00E4AA51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA4035B20AEA2EC00E4AA51 /* WLTooBarView.m in Sources */,
+				9CA4035820AEA0FC00E4AA51 /* WLAddressPickerView.m in Sources */,
 				9CA4033D20AE9F7F00E4AA51 /* ViewController.m in Sources */,
+				9CA4035520AEA05E00E4AA51 /* WLAddressModel.m in Sources */,
 				9CA4034820AE9F7F00E4AA51 /* main.m in Sources */,
+				9CA4036920AEA51000E4AA51 /* WLPickerViewManager.m in Sources */,
+				9CA4036620AEA48B00E4AA51 /* WLPickerView.m in Sources */,
+				9CA4036120AEA40300E4AA51 /* WLDatePickerView.m in Sources */,
 				9CA4033A20AE9F7F00E4AA51 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +434,12 @@
 		};
 		9CA4034C20AE9F7F00E4AA51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEEA218DC9D1155D82B6AD17 /* Pods-WLPickerView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WLPickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quangqiang.WLPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,10 +449,12 @@
 		};
 		9CA4034D20AE9F7F00E4AA51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 164A5667E54188809A661A1F /* Pods-WLPickerView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WLPickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quangqiang.WLPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
