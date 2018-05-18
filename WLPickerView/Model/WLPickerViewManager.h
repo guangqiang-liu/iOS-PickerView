@@ -15,7 +15,7 @@ typedef void (^DatePickerCommitBlock)(NSDate * _Nonnull date);
 typedef void (^DatePickerCancelBlock)(void);
 
 typedef void (^PickerViewCommitBlock)(NSString * _Nonnull string);
-typedef void (^PickerViewCustomCommitBlock)(id model);
+typedef void (^PickerViewCustomCommitBlock)(id _Nonnull model);
 typedef void (^PickerViewCancelBlock)(void);
 
 @interface WLPickerViewManager : NSObject
@@ -81,9 +81,6 @@ typedef void (^PickerViewCancelBlock)(void);
  * @param tag : will remeber the last date you had select.
  */
 - (void)showDatePickerWithTitle:(NSString *_Nullable)title cancelTitle:(NSString *_Nullable)cancelTitle commitTitle:(NSString *_Nullable)commitTitle firstDate:(NSDate *_Nullable)firstDate minDate:(NSDate *_Nullable)minDate maxDate:(NSDate *_Nullable)maxDate datePickerMode:(UIDatePickerMode)mode tag:(NSInteger)tag commitBlock:(DatePickerCommitBlock _Nullable )commitBlock cancelBlock:(DatePickerCancelBlock _Nullable )cancelBlock;
-
-
-
 
 // ================================pickerView===================================//
 

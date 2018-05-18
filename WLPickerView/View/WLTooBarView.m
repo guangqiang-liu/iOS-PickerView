@@ -8,8 +8,7 @@
 
 #import "WLTooBarView.h"
 
-#define BAR_COLOR [UIColor colorWithRed:0.090  green:0.463  blue:0.906 alpha:1]
-#define LINE_COLOR [UIColor colorWithRed:0.804  green:0.804  blue:0.804 alpha:1]
+#define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
@@ -18,12 +17,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        //self.translatesAutoresizingMaskIntoConstraints = false;
-        
-        _cancelBar = [UILabel new];
-        _cancelBar.font = [UIFont systemFontOfSize:14];
-        _cancelBar.textColor = BAR_COLOR;
+        _cancelBar = [[UILabel alloc] init];
+        _cancelBar.font = [UIFont systemFontOfSize:16];
+        _cancelBar.textColor = HexRGB(0x999999);
         _cancelBar.text = @"取消";
         _cancelBar.textAlignment = NSTextAlignmentLeft;
         _cancelBar.userInteractionEnabled = true;
@@ -33,18 +29,18 @@
         [_cancelBar setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
         [_cancelBar setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
         
-        _titleBar = [UILabel new];
-        _titleBar.font = [UIFont systemFontOfSize:14];
+        _titleBar = [[UILabel alloc] init];
+        _titleBar.font = [UIFont systemFontOfSize:18];
         _titleBar.text = @"标题";
         _titleBar.textAlignment = NSTextAlignmentCenter;
-        _titleBar.textColor = LINE_COLOR;
+        _titleBar.textColor = HexRGB(0x434343);
         [self addSubview:_titleBar];
         [_titleBar setTranslatesAutoresizingMaskIntoConstraints:false];
         [_titleBar setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
         
-        _commitBar = [UILabel new];
-        _commitBar.font = [UIFont systemFontOfSize:14];
-        _commitBar.textColor = BAR_COLOR;
+        _commitBar = [[UILabel alloc] init];
+        _commitBar.font = [UIFont systemFontOfSize:16];
+        _commitBar.textColor = HexRGB(0xFF4B4A);
         _commitBar.text = @"完成";
         _commitBar.textAlignment = NSTextAlignmentRight;
         _commitBar.userInteractionEnabled = true;
@@ -55,16 +51,16 @@
         [_commitBar setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
         
         UIView *topLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.5)];
-        topLineView.backgroundColor = LINE_COLOR;
+        topLineView.backgroundColor = HexRGB(0xEEEEEE);
         [self addSubview:topLineView];
         [topLineView setTranslatesAutoresizingMaskIntoConstraints:false];
         
         UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, SCREEN_WIDTH, 0.5)];
-        bottomLineView.backgroundColor = LINE_COLOR;
+        bottomLineView.backgroundColor = HexRGB(0xEEEEEE);
         [self addSubview:bottomLineView];
         [bottomLineView setTranslatesAutoresizingMaskIntoConstraints:false];
         
-        NSLayoutConstraint *constrant_a = [NSLayoutConstraint constraintWithItem:_cancelBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10];
+        NSLayoutConstraint *constrant_a = [NSLayoutConstraint constraintWithItem:_cancelBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:15];
         NSLayoutConstraint *constrant_b = [NSLayoutConstraint constraintWithItem:_cancelBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
         NSLayoutConstraint *constrant_c = [NSLayoutConstraint constraintWithItem:_cancelBar attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
         [self addConstraints:@[constrant_a, constrant_b, constrant_c]];
@@ -77,7 +73,7 @@
         NSLayoutConstraint *constrant_g = [NSLayoutConstraint constraintWithItem:_commitBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:_titleBar attribute:NSLayoutAttributeRight multiplier:1.0 constant:10];
         NSLayoutConstraint *constrant_h = [NSLayoutConstraint constraintWithItem:_commitBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
         NSLayoutConstraint *constrant_i = [NSLayoutConstraint constraintWithItem:_commitBar attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
-        NSLayoutConstraint *constrant_j = [NSLayoutConstraint constraintWithItem:_commitBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-10];
+        NSLayoutConstraint *constrant_j = [NSLayoutConstraint constraintWithItem:_commitBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-15];
         [self addConstraints:@[constrant_g, constrant_h, constrant_i, constrant_j]];
         
         NSLayoutConstraint *constrant_k = [NSLayoutConstraint constraintWithItem:topLineView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
@@ -91,13 +87,9 @@
         NSLayoutConstraint *constrant_q = [NSLayoutConstraint constraintWithItem:bottomLineView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
         NSLayoutConstraint *constrant_r = [NSLayoutConstraint constraintWithItem:bottomLineView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0.5];
         [self addConstraints:@[constrant_o, constrant_p, constrant_q, constrant_r]];
-        
-        
     }
     return self;
 }
-
-#pragma mark - Action
 
 - (void)cancelAction {
     if (self.cancelBlock) {
@@ -110,8 +102,6 @@
         self.commitBlock();
     }
 }
-
-#pragma mark - install
 
 - (void)setCancelBarTitle:(NSString *)cancelBarTitle {
     _cancelBarTitle = cancelBarTitle;
