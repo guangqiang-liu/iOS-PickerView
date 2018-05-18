@@ -49,6 +49,7 @@
 		9CA4036520AEA48B00E4AA51 /* WLPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPickerView.m; sourceTree = "<group>"; };
 		9CA4036720AEA51000E4AA51 /* WLPickerViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPickerViewManager.h; sourceTree = "<group>"; };
 		9CA4036820AEA51000E4AA51 /* WLPickerViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPickerViewManager.m; sourceTree = "<group>"; };
+		9CA4036A20AEAA1F00E4AA51 /* WLPickerView.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPickerView.pch; sourceTree = "<group>"; };
 		BEEA218DC9D1155D82B6AD17 /* Pods-WLPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +109,7 @@
 				9CA4034320AE9F7F00E4AA51 /* LaunchScreen.storyboard */,
 				9CA4034620AE9F7F00E4AA51 /* Info.plist */,
 				9CA4034720AE9F7F00E4AA51 /* main.m */,
+				9CA4036A20AEAA1F00E4AA51 /* WLPickerView.pch */,
 			);
 			path = WLPickerView;
 			sourceTree = "<group>";
@@ -438,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)WLPickerView/WLPickerView.pch";
 				INFOPLIST_FILE = WLPickerView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)WLPickerView/WLPickerView.pch";
 				INFOPLIST_FILE = WLPickerView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
