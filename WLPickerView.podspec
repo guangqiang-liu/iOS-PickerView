@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WLPickerView'
-  s.version          = '0.0.2'
+  s.version          = '0.0.1'
   s.summary          = '自定义日期、地址、select选择器组件'
 
 # This description is used to generate tags and improve search results.
@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
                        TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://gitlab.qianbaocard.org/iOS/view/WLPickerView'
+  s.homepage         = 'https://github.com/guangqiang-liu/GQPickerView'
   s.license          = "MIT"
   s.author           = { 'guangqiang' => '1126756952@qq.com' }
-  s.source           = { :git => 'git@gitlab.qianbaocard.org:iOS/view/WLPickerView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:guangqiang-liu/GQPickerView.git', :tag => s.version.to_s }
 
   s.platform         = :ios, "8.0"
 
