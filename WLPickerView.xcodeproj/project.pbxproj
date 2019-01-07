@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1D072A1B19293FBD307EAD /* Pods_WLPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB480D07B8248683CF3A5FC6 /* Pods_WLPickerView.framework */; };
 		9CA4033A20AE9F7F00E4AA51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4033920AE9F7F00E4AA51 /* AppDelegate.m */; };
 		9CA4033D20AE9F7F00E4AA51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4033C20AE9F7F00E4AA51 /* ViewController.m */; };
 		9CA4034020AE9F7F00E4AA51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4033E20AE9F7F00E4AA51 /* Main.storyboard */; };
@@ -20,12 +21,10 @@
 		9CA4036320AEA47A00E4AA51 /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4036220AEA47A00E4AA51 /* province_data.xml */; };
 		9CA4036620AEA48B00E4AA51 /* WLPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4036520AEA48B00E4AA51 /* WLPickerView.m */; };
 		9CA4036920AEA51000E4AA51 /* WLPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4036820AEA51000E4AA51 /* WLPickerViewManager.m */; };
-		D74F7C6CBBAB6D2C28445E2B /* libPods-WLPickerView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89850BFA22BC525357E26115 /* libPods-WLPickerView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		164A5667E54188809A661A1F /* Pods-WLPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView.release.xcconfig"; sourceTree = "<group>"; };
-		89850BFA22BC525357E26115 /* libPods-WLPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WLPickerView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA4033520AE9F7F00E4AA51 /* WLPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA4033820AE9F7F00E4AA51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CA4033920AE9F7F00E4AA51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		9CA4036720AEA51000E4AA51 /* WLPickerViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPickerViewManager.h; sourceTree = "<group>"; };
 		9CA4036820AEA51000E4AA51 /* WLPickerViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPickerViewManager.m; sourceTree = "<group>"; };
 		9CA4036A20AEAA1F00E4AA51 /* WLPickerView.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPickerView.pch; sourceTree = "<group>"; };
+		AB480D07B8248683CF3A5FC6 /* Pods_WLPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEA218DC9D1155D82B6AD17 /* Pods-WLPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLPickerView/Pods-WLPickerView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74F7C6CBBAB6D2C28445E2B /* libPods-WLPickerView.a in Frameworks */,
+				1E1D072A1B19293FBD307EAD /* Pods_WLPickerView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +165,7 @@
 		CF2F3291A2837249FF12EF85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89850BFA22BC525357E26115 /* libPods-WLPickerView.a */,
+				AB480D07B8248683CF3A5FC6 /* Pods_WLPickerView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
