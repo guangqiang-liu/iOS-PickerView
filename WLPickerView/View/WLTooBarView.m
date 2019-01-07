@@ -9,8 +9,8 @@
 #import "WLTooBarView.h"
 
 #define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 @implementation WLTooBarView
 
@@ -50,12 +50,12 @@
         [_commitBar setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
         [_commitBar setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
         
-        UIView *topLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.5)];
+        UIView *topLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5)];
         topLineView.backgroundColor = HexRGB(0xEEEEEE);
         [self addSubview:topLineView];
         [topLineView setTranslatesAutoresizingMaskIntoConstraints:false];
         
-        UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, SCREEN_WIDTH, 0.5)];
+        UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, kScreenWidth, 0.5)];
         bottomLineView.backgroundColor = HexRGB(0xEEEEEE);
         [self addSubview:bottomLineView];
         [bottomLineView setTranslatesAutoresizingMaskIntoConstraints:false];

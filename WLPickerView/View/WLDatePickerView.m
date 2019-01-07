@@ -8,8 +8,8 @@
 
 #import "WLDatePickerView.h"
 
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface WLDatePickerView()
 
@@ -36,7 +36,7 @@
     
     CGRect initialFrame;
     if (CGRectIsEmpty(frame)) {
-        initialFrame = CGRectMake(0, self.toolBar.frame.size.height, SCREEN_WIDTH, 216);
+        initialFrame = CGRectMake(0, self.toolBar.frame.size.height, kScreenWidth, 216);
     } else {
         initialFrame = frame;
     }
@@ -51,19 +51,19 @@
 }
 
 - (void)initToolBar {
-    self.toolBar = [[WLTooBarView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    self.toolBar = [[WLTooBarView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
     self.toolBar.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)initContainerView {
-    self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     self.containerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     self.containerView.userInteractionEnabled = YES;
     [self.containerView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenWithAnimation)]];
 }
 
 - (void)initBgView {
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - self.frame.size.height - 44, SCREEN_WIDTH, self.frame.size.height + self.toolBar.frame.size.height)];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - self.frame.size.height - 44, kScreenWidth, self.frame.size.height + self.toolBar.frame.size.height)];
 }
 
 #pragma mark - Action
@@ -110,9 +110,9 @@
     [self addViews];
     self.containerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
     CGFloat height = self.bgView.frame.size.height;
-    self.bgView.center = CGPointMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT + height / 2);
+    self.bgView.center = CGPointMake(kScreenWidth / 2, kScreenHeight + height / 2);
     [UIView animateWithDuration:0.25 animations:^{
-        self.bgView.center = CGPointMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT - height / 2);
+        self.bgView.center = CGPointMake(kScreenWidth / 2, kScreenHeight - height / 2);
         self.containerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     }];
     
@@ -121,7 +121,7 @@
 - (void)hiddenWithAnimation {
     CGFloat height = self.bgView.frame.size.height;
     [UIView animateWithDuration:0.25 animations:^{
-        self.bgView.center = CGPointMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT + height / 2);
+        self.bgView.center = CGPointMake(kScreenWidth / 2, kScreenHeight + height / 2);
         self.containerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
     } completion:^(BOOL finished) {
         [self hiddenViews];
